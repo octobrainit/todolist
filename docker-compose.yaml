@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15
+    container_name: postgres-db
+    environment:
+      POSTGRES_USER: user22131
+      POSTGRES_PASSWORD: pass232154
+      POSTGRES_DB: tasklistdb
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+  app:
+    build:
+      context: .
+      dockerfile: dockerfile
+    container_name: tasklistapp
+    environment:
+      - DB_CONNECTION_STRING=Host=postgres-db;Port=5432;Database=tasklistDb;Username=user22131;Password=pass232154
+    depends_on:
+      - postgres
+    ports:
+      - "5218:8080"
+volumes:
+  postgres_data:

@@ -1,0 +1,26 @@
+{
+  "profiles": {
+    "http": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "DB_CONNECTION_STRING": "Host=localhost;Port=5432;Database=tasklistDb;Username=user22131;Password=pass232154"
+      },
+      "dotnetRunMessages": true,
+      "applicationUrl": "http://localhost:5218"
+    },
+    "WSL": {
+      "commandName": "WSL2",
+      "launchBrowser": true,
+      "launchUrl": "http://localhost:5218",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "ASPNETCORE_URLS": "http://localhost:5218",
+        "DB_CONNECTION_STRING": "Host=localhost;Port=5432;Database=tasklistDb;Username=user22131;Password=pass232154"
+      },
+      "distributionName": ""
+    }
+  },
+  "$schema": "http://json.schemastore.org/launchsettings.json"
+}

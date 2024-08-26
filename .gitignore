@@ -88,3 +88,5 @@ $RECYCLE.BIN/
 .idea_modules/
 
 # End of Git ignore
+.vs
+-s
